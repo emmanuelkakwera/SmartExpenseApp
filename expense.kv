@@ -1,0 +1,79 @@
+<DatePickerPopup@Popup>:
+    selected_date: ""
+    title: "Select Date"
+    size_hint: 0.8, 0.6
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 15
+
+        Label:
+            text: "Select Date"
+            font_size: '18sp'
+            bold: True
+            size_hint_y: None
+            height: '40dp'
+
+        BoxLayout:
+            size_hint_y: None
+            height: '50dp'
+            spacing: 10
+
+            Label:
+                text: "Year:"
+                size_hint_x: 0.3
+                bold: True
+
+            Spinner:
+                id: year_spinner
+                text: "2024"
+                values: []
+                size_hint_x: 0.7
+
+        BoxLayout:
+            size_hint_y: None
+            height: '50dp'
+            spacing: 10
+
+            Label:
+                text: "Month:"
+                size_hint_x: 0.3
+                bold: True
+
+            Spinner:
+                id: month_spinner
+                text: "01"
+                values: []
+                size_hint_x: 0.7
+
+        BoxLayout:
+            size_hint_y: None
+            height: '50dp'
+            spacing: 10
+
+            Label:
+                text: "Day:"
+                size_hint_x: 0.3
+                bold: True
+
+            Spinner:
+                id: day_spinner
+                text: "01"
+                values: []
+                size_hint_x: 0.7
+
+        BoxLayout:
+            size_hint_y: None
+            height: '50dp'
+            spacing: 10
+
+            CustomButton:
+                text: "Cancel"
+                background_color: 0.7, 0.7, 0.7, 1
+                on_press: root.dismiss()
+
+            CustomButton:
+                text: "Confirm"
+                background_color: 0.2, 0.7, 0.3, 1
+                on_press: root.confirm_date()
